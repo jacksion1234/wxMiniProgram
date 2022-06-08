@@ -1,3 +1,0 @@
-<!--pages/video-detail/index.wxml-->
-<video class="video" src="{{ mvUrl }}" autoplay loop>
-</video>
