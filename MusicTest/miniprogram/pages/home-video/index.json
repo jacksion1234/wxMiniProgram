@@ -1,0 +1,8 @@
+{
+  "enablePullDownRefresh": true,
+  "disableScroll": false,
+  "backgroundTextStyle": "dark",
+  "usingComponents": {
+    "home-video-item": "../../components/home-video-item/index"
+  }
+}

@@ -1,0 +1,30 @@
+/**app.wxss**/
+page {
+  box-sizing: border-box;
+  /* width: 100%; */
+  background-color: #fafafa;
+  cursor: default;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  width: 100%;
+  overflow-x: hidden;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+::-webkit-scrollbar {
+  display:none;
+  width:0;
+  height:0;
+  color:transparent;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+}
