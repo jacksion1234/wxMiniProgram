@@ -1,1 +1,7 @@
 /* components/peak-area-item/index.wxss */
+.main {
+  background-color: #AAA;
+  border-radius: 10rpx;
+  width: 100%;
+  height: 300rpx;
+}

@@ -11,6 +11,7 @@ Page({
     bannerList: [] as any,
     hotMusic: [] as any,
     recommendMusic: [] as any,
+    peaklists: [] as any, // 巅峰榜
     imageHeight: 0,
     rankingMusicList: []
   },

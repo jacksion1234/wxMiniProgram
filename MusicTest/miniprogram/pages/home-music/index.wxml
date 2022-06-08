@@ -31,8 +31,8 @@
     <view class="peak-list">
       <block wx:for="{{peaklists}}" wx:key="name">
         <peak-area-item item="{{item}}" 
-                          bindtap="handleRankingItemClick"
-                          data-idx="{{index}}">
+                        bindtap="handleRankingItemClick"
+                        data-idx="{{index}}">
         </peak-area-item>
       </block>
     </view>

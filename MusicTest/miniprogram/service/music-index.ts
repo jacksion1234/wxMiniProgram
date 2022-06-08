@@ -19,3 +19,6 @@ export function getMusicMenu(cat: string = '全部', limit: number = 12, offset:
     offset
   }).then((res: MusicPlaylistType) => res)
 }
+export function getPeakingList(id: number|string) {
+  return MyRequest.get(`/playlist/detail?id=${id}`)
+}

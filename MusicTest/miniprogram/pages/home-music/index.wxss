@@ -1,7 +1,7 @@
 /* pages/home-music/index.wxss */
 page {
-  /* background-color: #fafafa; */
-  background-color: transparent;
+  background-color: #fafafa;
+  /* background-color: transparent; */
   /* box-sizing: border-box; */
   padding: 0 20rpx;
 }

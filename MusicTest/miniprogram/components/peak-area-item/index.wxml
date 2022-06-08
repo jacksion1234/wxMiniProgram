@@ -1,2 +1,3 @@
 <!--components/peak-area-item/index.wxml-->
-<text>components/peak-area-item/index.wxml</text>
+<view class="main">
+</view>
