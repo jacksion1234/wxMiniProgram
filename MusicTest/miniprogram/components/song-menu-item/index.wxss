@@ -1,0 +1,42 @@
+/* components/song-menu-item/index.wxss */
+.main {
+}
+.top {
+  position: relative;
+  margin-bottom: 10rpx;
+}
+.top .image {
+  width: 100%;
+  border-radius: 10rpx;
+  display: block;
+  
+}
+.play-counter {
+  position: absolute;
+  right: 0rpx;
+  bottom: 0rpx;
+  padding: 5rpx 8rpx;
+  font-size: 25rpx;
+  color: #fff;
+  border-radius: 10rpx;
+  background: rgba(1, 1, 1, 0.5);
+}
+.bottom {
+  width: 100%;
+  font-size: 26rpx;
+
+  /* 显示两行 */
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  display: -moz-box;
+  -moz-line-clamp: 2;
+  -moz-box-orient: vertical;
+  word-wrap: break-word;
+  /* word-break: break-all; */
+  /* 自动换行 */
+  word-wrap: normal; 
+  white-space: normal;
+  overflow: hidden;
+}

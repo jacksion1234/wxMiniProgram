@@ -1,0 +1,34 @@
+/* components/home-video-item/index.wxss */
+.item {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  flex-direction: column;
+  margin-bottom: 20rpx;
+}
+.album {
+  width: 100%;
+}
+.image {
+  width: 100%;
+  border-radius: 10rpx;
+}
+.content {
+  font-family: '微软雅黑';
+  margin-top: 10rpx;
+  font-size: 28rpx;
+  
+  /* 显示两行 */
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  display: -moz-box;
+  -moz-line-clamp: 2;
+  -moz-box-orient: vertical;
+  word-wrap: break-word;
+  word-break: break-all;
+  white-space: normal;
+  overflow: hidden;
+}
