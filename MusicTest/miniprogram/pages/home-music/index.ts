@@ -22,7 +22,9 @@ Page({
   onLoad() {
     this.getData()
     // 发起共享数据的请求
-    RankingStore.dispatch('getRankingList')
+    // RankingStore.dispatch('getRankingList')
+    // 查询巅峰榜数据
+    RankingStore.dispatch('getPeakingListAction')
 
     // 获取共享的数据
     RankingStore.onState('hotRanking', (res: any) => {
@@ -30,6 +32,10 @@ Page({
       this.setData({rankingMusicList: res.tracks.slice(0, 6)})
       console.log('home-music:', this.data.rankingMusicList);
     })
+    // 获取巅峰榜数据
+    RankingStore.onState('newRanking', this.getPeakingListHandler(0))
+    RankingStore.onState('originRanking', this.getPeakingListHandler(2))
+    RankingStore.onState('upRanking', this.getPeakingListHandler(3))
   },
 
   /**
@@ -58,6 +64,23 @@ Page({
       this.setData({ imageHeight: data.height })
     })
     console.log('图片加载完毕');
+  },
+  // 处理获取巅峰榜数据
+  getPeakingListHandler(i: string|number) {
+    return (res: any) => {
+      console.log('store返回的数据', res);
+      if (Object.keys(res).length == 0) return
+      const name = res.name
+      const coverImgUrl = res.coverImgUrl
+      const top3 = res.tracks.slice(0,3)
+      const playCount = res.playCount
+      const peakInfo = { name, coverImgUrl, top3, playCount }
+      const newPeaklists = {...this.data.peaklists, [i]: peakInfo}
+      console.log('最终的数组:', newPeaklists);
+      this.setData({
+        peaklists: newPeaklists
+      })
+    }
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

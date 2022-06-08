@@ -21,7 +21,7 @@ const rankingStore = new HYEventStore({
         ctx.hotRanking = res.playlist
       })
     },
-    getPeakingList(ctx: any) {
+    getPeakingListAction(ctx: any) {
       for (let i = 0; i < 4; i++) {
         const key = songMap[i].key
         getPeakingList(key).then(res => {
